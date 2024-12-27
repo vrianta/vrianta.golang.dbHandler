@@ -2,6 +2,7 @@ package db
 
 import (
 	"api/db/mysql"
+	"api/db/util"
 	"database/sql"
 	"fmt"
 	"log"
@@ -27,11 +28,11 @@ var (
 func Init() {
 	if DBType == DBTypes.MYSQL {
 		mysql.DB = DB
-		mysql.UserName = UserName
-		mysql.Password = Password
-		mysql.Host = Host
-		mysql.Port = Port
-		mysql.DBName = DBName
+		mysql.UserName = util.GetEnvriontmentVar("MYSQL_USERNAME", UserName)
+		mysql.Password = util.GetEnvriontmentVar("MYSQL_PASSWORD", Password)
+		mysql.Host = util.GetEnvriontmentVar("MYSQL_HOST", Host)
+		mysql.Port = util.GetEnvriontmentVar("MYSQL_PORT", Port)
+		mysql.DBName = util.GetEnvriontmentVar("MYSQL_DB_NAME", DBName)
 	}
 }
 
