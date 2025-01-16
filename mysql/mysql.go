@@ -60,7 +60,7 @@ func CloseDatabaseConnection() {
 }
 
 // Function to fetch and scan the result into variadic parameters
-func RunQuery(query string) (*sql.Rows, error) {
+func RunQuery(query string, args ...any) (*sql.Rows, error) {
 
 	err := DB.Ping()
 	if err != nil {
@@ -71,7 +71,7 @@ func RunQuery(query string) (*sql.Rows, error) {
 	}
 
 	// Execute the query
-	rows, err := DB.Query(query)
+	rows, err := DB.Query(query, args...)
 	if err != nil {
 		return nil, fmt.Errorf("could not execute query: %v", err)
 	}
