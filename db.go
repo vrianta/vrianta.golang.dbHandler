@@ -1,11 +1,12 @@
 package db
 
 import (
-	"api/db/mysql"
-	"api/db/util"
 	"database/sql"
 	"fmt"
 	"log"
+
+	"vrianta.golang.dbHandler/v2/mysql"
+	"vrianta.golang.dbHandler/v2/util"
 )
 
 var (
