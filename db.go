@@ -5,8 +5,8 @@ import (
 	"fmt"
 	"log"
 
-	"vrianta.in/golang/db/mysql"
-	"vrianta.in/golang/db/util"
+	"packages.vrianta.in/golang/db/mysql"
+	"packages.vrianta.in/golang/db/util"
 )
 
 var (
