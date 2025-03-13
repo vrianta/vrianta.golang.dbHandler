@@ -1,4 +1,4 @@
-module packages.vrianta.golang.dbHandler
+module packages.vrianta.in/golang/db
 
 go 1.24.1
 
